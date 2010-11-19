@@ -2,23 +2,174 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity I2C_Protocal is
-	port(	clk_hi									: 	IN STD_LOGIC;
-			SDA_in, SCL_in							:	IN STD_LOGIC;
-			byte_done, addr_bsend					:	IN STD_LOGIC;
-			SDA_out, SDA_enable, data_out, addr_out	: OUT STD_LOGIC);
+	port(	clk_hi:		IN STD_LOGIC;
+			fsm_in:		IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			fsm_out: 	OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 end I2C_Protocal;
 
 architecture FSM_Moore of I2C_Protocal is
-	TYPE state_type is (S0, S1, S2);
+	TYPE state_type is (S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,
+						S10,S11,S12,S13,S14,S15,S16,S17,S18,S19,
+						S20,S21,S22,S23,S24,S25,S26,S27,S28);
 	SIGNAL y : state_type;
 begin
 	process(clk_hi)
 	begin
-		if (clk_hi'event and clk = '1') then
+		if (clk_hi'event and clk_hi = '1') then
 			case y is
 				when S0 =>
+					if 		fsm_in="1100" then 	y<=S1;
+					else 						y<=S0;
+			        end if;
+			    when S1 =>
+					if 		fsm_in="0100" then 	y<=S2;
+					else 						y<=S1;
+					end if;
+				when S2 =>
+					if fsm_in(2 downto 0)="000" then y<=S3;
+					else 						y<=S2;
+					end if;
+				when S3 =>
+					if 		fsm_in="0100" then 	y<=S4;
+					elsif 	fsm_in="1100" then 	y<=S5;
+					else 						y<=S3;
+					end if;
+				when S4 =>
+					if fsm_in(2 downto 0)="000" then y<=S6;
+					elsif fsm_in(2 downto 0)="011" then y<=S8;
+					elsif fsm_in(2 downto 0)="010" then y<=S26;
+					else 						y<=S4;
+					end if;
+				when S5 =>
+					if fsm_in(2 downto 0)="000" then y<=S7;
+					elsif fsm_in(2 downto 0)="011" then y<=S18;
+					elsif fsm_in(2 downto 0)="010" then y<=S26;
+					else 						y<=S5;
+					end if;
+				when S6 =>
+					if 		fsm_in="0100" then 	y<=S4;
+					elsif 	fsm_in="1100" then 	y<=S5;
+					else 						y<=S6;
+					end if;
+				when S7 =>
+					if 		fsm_in="0100" then 	y<=S4;
+					elsif 	fsm_in="1100" then 	y<=S5;
+					else 						y<=S7;
+					end if;
+				when S8 =>
+					if fsm_in(2 downto 0)="111" then y<=S9;
+					else y<=S8;
+					end if;
+				when S9 =>
+					if fsm_in(2 downto 0)="000" then y<=S10;
+					else y<=S9;
+					end if;
+				when S10 =>
+					if fsm_in="0100" 	  then 	y<=S11;
+					elsif fsm_in = "1100" then 	y<=S12;
+					else 						y<=S10;
+					end if;
+				when S11 =>
+					if fsm_in(2 downto 0)="000" then y<=S13;
+					elsif fsm_in(2 downto 0)="010" then y<=S15;
+					elsif fsm_in="1100" then y<=S1;
+					else y<=S11;
+					end if;
+				when S12 =>
+					if fsm_in(2 downto 0)="000" then y<=S14;
+					elsif fsm_in(2 downto 0)="010" then y<=S16;
+					else y<=S12;
+					end if;
+				when S13 =>
+					if fsm_in="0100" then y<=S11;
+					elsif fsm_in="1100" then y<=S12;
+					else y<=S13;
+					end if;
+				when S14 =>
+					if fsm_in="0100" then y<=S11;
+					elsif fsm_in="1100" then y<=S12;
+					else y<=S14;
+					end if;
+				when S15 =>
+					if fsm_in(2 downto 0)="110" then y<=S17;
+					else y<=S15;
+					end if;
+				when S16 =>
+					if fsm_in(2 downto 0)="110" then y<=S17;
+					else y<=S16;
+					end if;
+				when S17 =>
+					if fsm_in(2 downto 0)="000" then y<=S10;
+					else y<=S17;
+					end if;
+				when S18 =>
+					if fsm_in(2 downto 0)="111" then y<=S19;
+					else y<=S18;
+					end if;
+				when S19 =>
+					if fsm_in(2 downto 0)="000" then y<=S20;
+					elsif fsm_in(2 downto 0)="001" then y<=S21;
+					else y<=S19;
+					end if;
+				when S20 =>
+					if fsm_in(2 downto 1)="10" then y<=S22;
+					else y<=S20;
+					end if;
+				when S21 =>
+					if fsm_in(2 downto 1)="10" then y<=S23;
+					else y<=S21;
+					end if;
+				when S22 =>
+					if fsm_in(2 downto 0)="000" then y<=S20;
+					elsif fsm_in(2 downto 0)="001" then y<=S21;
+					elsif fsm_in(2 downto 0)="010" then y<=S24;
+					else y<=S22;
+					end if;
+				when S23 =>
+					if fsm_in(2 downto 0)="000" then y<=S20;
+					elsif fsm_in(2 downto 0)="001" then y<=S21;
+					elsif fsm_in(2 downto 0)="010" then y<=S24;
+					else y<=S23;
+					end if;
+				when S24 =>
+					if fsm_in="0110" then y<=S25;
+					else y<=S24;
+					end if;
+				when S25 =>
+					if fsm_in(2 downto 0)="000" then y<=S20;
+					elsif fsm_in(2 downto 0)="001" then y<=S21;
+					elsif fsm_in="1100" then y<=S1;
+					else y<=S25;
+					end if;
+				when S26 =>
+					if fsm_in(2 downto 0)="000" then y<=S27;
+					else y<=S26;
+					end if;
+				when S27 =>
+					if fsm_in="0100" then y<=S28;
+					else y<=S27;
+					end if;
+				when S28 =>
+					if fsm_in="1100" then y<=S1;
+					else y<=S28;
+					end if;	
 			end case;
 		end if;
 	end process;
+	with y select
+	fsm_out<="0001" when S7,
+			 "0100" when S8,
+			 "0100" when S9,
+			 "0010" when S14,
+			 "0100" when S15,
+			 "0110" when S16,
+			 "0100" when S17,
+			 "0101" when S18,
+			 "0100" when S19,
+			 "0100" when S20,
+			 "0100" when S21,
+			 "0100" when S22,
+			 "1100" when S23,
+			 "0000" when others;
 
 end FSM_Moore;
