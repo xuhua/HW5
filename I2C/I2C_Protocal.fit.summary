@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri Nov 19 02:30:25 2010
+Fitter Status : Successful - Fri Nov 19 13:05:30 2010
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
 Revision Name : I2C_Protocal
 Top-level Entity Name : I2C_Protocal
 Family : Stratix II
 Device : EP2S15F484C3
 Timing Models : Final
-Logic utilization : 0 %
-    Combinational ALUTs : 0 / 12,480 ( 0 % )
-    Dedicated logic registers : 0 / 12,480 ( 0 % )
-Total registers : 0
+Logic utilization : < 1 %
+    Combinational ALUTs : 47 / 12,480 ( < 1 % )
+    Dedicated logic registers : 32 / 12,480 ( < 1 % )
+Total registers : 32
 Total pins : 9 / 343 ( 3 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 419,328 ( 0 % )

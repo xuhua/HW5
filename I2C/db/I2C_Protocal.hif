@@ -30,7 +30,7 @@ ON
 # case_insensitive
 # source_file
 I2C_Protocal.vhd
-e8f1c07fe681396a9d3a3b5c27d1bad
+8ca93986a6648fe9b9f11e77e9e66d7f
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
