@@ -1,15 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Nov 19 13:05:26 2010
+Analysis & Synthesis Status : Successful - Fri Nov 19 14:32:50 2010
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
 Revision Name : I2C_Protocal
 Top-level Entity Name : I2C_Protocal
-Family : Stratix II
-Logic utilization : N/A
-    Combinational ALUTs : 44
+Family : Cyclone III
+Total logic elements : 60
+    Total combinational functions : 60
     Dedicated logic registers : 29
 Total registers : 29
 Total pins : 9
 Total virtual pins : 0
-Total block memory bits : 0
-DSP block 9-bit elements : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
-Total DLLs : 0

@@ -1,0 +1,311 @@
+Simulator report for I2C_Protocal
+Fri Nov 19 14:33:51 2010
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 4.0 us       ;
+; Simulation Netlist Size     ; 108 nodes    ;
+; Simulation Coverage         ;      61.11 % ;
+; Total Number of Transitions ; 2171         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C16Q240C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      61.11 % ;
+; Total nodes checked                                 ; 108          ;
+; Total output ports checked                          ; 108          ;
+; Total output ports with complete 1/0-value coverage ; 66           ;
+; Total output ports with no 1/0-value coverage       ; 40           ;
+; Total output ports with no 1-value coverage         ; 40           ;
+; Total output ports with no 0-value coverage         ; 42           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                              ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |I2C_Protocal|y.S7                ; |I2C_Protocal|y.S7                ; q                ;
+; |I2C_Protocal|fsm_out~1           ; |I2C_Protocal|fsm_out~1           ; combout          ;
+; |I2C_Protocal|y.S14               ; |I2C_Protocal|y.S14               ; q                ;
+; |I2C_Protocal|fsm_out~0           ; |I2C_Protocal|fsm_out~0           ; combout          ;
+; |I2C_Protocal|WideOr28~0          ; |I2C_Protocal|WideOr28~0          ; combout          ;
+; |I2C_Protocal|y.S9                ; |I2C_Protocal|y.S9                ; q                ;
+; |I2C_Protocal|WideOr28~2          ; |I2C_Protocal|WideOr28~2          ; combout          ;
+; |I2C_Protocal|y.S8                ; |I2C_Protocal|y.S8                ; q                ;
+; |I2C_Protocal|WideOr28~4          ; |I2C_Protocal|WideOr28~4          ; combout          ;
+; |I2C_Protocal|WideOr28~5          ; |I2C_Protocal|WideOr28~5          ; combout          ;
+; |I2C_Protocal|y.S5                ; |I2C_Protocal|y.S5                ; q                ;
+; |I2C_Protocal|Equal4~0            ; |I2C_Protocal|Equal4~0            ; combout          ;
+; |I2C_Protocal|Selector2~0         ; |I2C_Protocal|Selector2~0         ; combout          ;
+; |I2C_Protocal|Selector6~0         ; |I2C_Protocal|Selector6~0         ; combout          ;
+; |I2C_Protocal|Selector7~0         ; |I2C_Protocal|Selector7~0         ; combout          ;
+; |I2C_Protocal|Equal4~1            ; |I2C_Protocal|Equal4~1            ; combout          ;
+; |I2C_Protocal|y.S12               ; |I2C_Protocal|y.S12               ; q                ;
+; |I2C_Protocal|Selector13~0        ; |I2C_Protocal|Selector13~0        ; combout          ;
+; |I2C_Protocal|y.S11               ; |I2C_Protocal|y.S11               ; q                ;
+; |I2C_Protocal|Selector8~0         ; |I2C_Protocal|Selector8~0         ; combout          ;
+; |I2C_Protocal|Equal4~4            ; |I2C_Protocal|Equal4~4            ; combout          ;
+; |I2C_Protocal|Selector21~0        ; |I2C_Protocal|Selector21~0        ; combout          ;
+; |I2C_Protocal|y~58                ; |I2C_Protocal|y~58                ; combout          ;
+; |I2C_Protocal|y.S4                ; |I2C_Protocal|y.S4                ; q                ;
+; |I2C_Protocal|Selector7~1         ; |I2C_Protocal|Selector7~1         ; combout          ;
+; |I2C_Protocal|Selector20~0        ; |I2C_Protocal|Selector20~0        ; combout          ;
+; |I2C_Protocal|Selector4~0         ; |I2C_Protocal|Selector4~0         ; combout          ;
+; |I2C_Protocal|y.S6                ; |I2C_Protocal|y.S6                ; q                ;
+; |I2C_Protocal|y.S3                ; |I2C_Protocal|y.S3                ; q                ;
+; |I2C_Protocal|Selector4~1         ; |I2C_Protocal|Selector4~1         ; combout          ;
+; |I2C_Protocal|Equal0~0            ; |I2C_Protocal|Equal0~0            ; combout          ;
+; |I2C_Protocal|Selector4~2         ; |I2C_Protocal|Selector4~2         ; combout          ;
+; |I2C_Protocal|Selector11~0        ; |I2C_Protocal|Selector11~0        ; combout          ;
+; |I2C_Protocal|y.S10               ; |I2C_Protocal|y.S10               ; q                ;
+; |I2C_Protocal|Selector11~1        ; |I2C_Protocal|Selector11~1        ; combout          ;
+; |I2C_Protocal|Selector11~2        ; |I2C_Protocal|Selector11~2        ; combout          ;
+; |I2C_Protocal|Equal1~0            ; |I2C_Protocal|Equal1~0            ; combout          ;
+; |I2C_Protocal|Selector10~0        ; |I2C_Protocal|Selector10~0        ; combout          ;
+; |I2C_Protocal|Selector10~1        ; |I2C_Protocal|Selector10~1        ; combout          ;
+; |I2C_Protocal|Selector3~0         ; |I2C_Protocal|Selector3~0         ; combout          ;
+; |I2C_Protocal|Selector5~0         ; |I2C_Protocal|Selector5~0         ; combout          ;
+; |I2C_Protocal|y.S2                ; |I2C_Protocal|y.S2                ; q                ;
+; |I2C_Protocal|Selector2~1         ; |I2C_Protocal|Selector2~1         ; combout          ;
+; |I2C_Protocal|Selector9~0         ; |I2C_Protocal|Selector9~0         ; combout          ;
+; |I2C_Protocal|y.S1                ; |I2C_Protocal|y.S1                ; q                ;
+; |I2C_Protocal|Selector1~0         ; |I2C_Protocal|Selector1~0         ; combout          ;
+; |I2C_Protocal|Selector0~0         ; |I2C_Protocal|Selector0~0         ; combout          ;
+; |I2C_Protocal|Selector0~1         ; |I2C_Protocal|Selector0~1         ; combout          ;
+; |I2C_Protocal|Selector25~0        ; |I2C_Protocal|Selector25~0        ; combout          ;
+; |I2C_Protocal|fsm_out[0]~output   ; |I2C_Protocal|fsm_out[0]~output   ; o                ;
+; |I2C_Protocal|fsm_out[0]          ; |I2C_Protocal|fsm_out[0]          ; padout           ;
+; |I2C_Protocal|fsm_out[1]~output   ; |I2C_Protocal|fsm_out[1]~output   ; o                ;
+; |I2C_Protocal|fsm_out[1]          ; |I2C_Protocal|fsm_out[1]          ; padout           ;
+; |I2C_Protocal|fsm_out[2]~output   ; |I2C_Protocal|fsm_out[2]~output   ; o                ;
+; |I2C_Protocal|fsm_out[2]          ; |I2C_Protocal|fsm_out[2]          ; padout           ;
+; |I2C_Protocal|fsm_in[0]~input     ; |I2C_Protocal|fsm_in[0]~input     ; o                ;
+; |I2C_Protocal|fsm_in[0]           ; |I2C_Protocal|fsm_in[0]           ; padout           ;
+; |I2C_Protocal|fsm_in[1]~input     ; |I2C_Protocal|fsm_in[1]~input     ; o                ;
+; |I2C_Protocal|fsm_in[1]           ; |I2C_Protocal|fsm_in[1]           ; padout           ;
+; |I2C_Protocal|fsm_in[2]~input     ; |I2C_Protocal|fsm_in[2]~input     ; o                ;
+; |I2C_Protocal|fsm_in[2]           ; |I2C_Protocal|fsm_in[2]           ; padout           ;
+; |I2C_Protocal|clk_hi~input        ; |I2C_Protocal|clk_hi~input        ; o                ;
+; |I2C_Protocal|clk_hi              ; |I2C_Protocal|clk_hi              ; padout           ;
+; |I2C_Protocal|fsm_in[3]~input     ; |I2C_Protocal|fsm_in[3]~input     ; o                ;
+; |I2C_Protocal|fsm_in[3]           ; |I2C_Protocal|fsm_in[3]           ; padout           ;
+; |I2C_Protocal|clk_hi~inputclkctrl ; |I2C_Protocal|clk_hi~inputclkctrl ; outclk           ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |I2C_Protocal|y.S18             ; |I2C_Protocal|y.S18             ; q                ;
+; |I2C_Protocal|y.S16             ; |I2C_Protocal|y.S16             ; q                ;
+; |I2C_Protocal|y.S15             ; |I2C_Protocal|y.S15             ; q                ;
+; |I2C_Protocal|WideOr28~1        ; |I2C_Protocal|WideOr28~1        ; combout          ;
+; |I2C_Protocal|y.S17             ; |I2C_Protocal|y.S17             ; q                ;
+; |I2C_Protocal|y.S19             ; |I2C_Protocal|y.S19             ; q                ;
+; |I2C_Protocal|y.S22             ; |I2C_Protocal|y.S22             ; q                ;
+; |I2C_Protocal|y.S23             ; |I2C_Protocal|y.S23             ; q                ;
+; |I2C_Protocal|WideOr28~3        ; |I2C_Protocal|WideOr28~3        ; combout          ;
+; |I2C_Protocal|y.S20             ; |I2C_Protocal|y.S20             ; q                ;
+; |I2C_Protocal|y.S21             ; |I2C_Protocal|y.S21             ; q                ;
+; |I2C_Protocal|Selector17~0      ; |I2C_Protocal|Selector17~0      ; combout          ;
+; |I2C_Protocal|Equal4~2          ; |I2C_Protocal|Equal4~2          ; combout          ;
+; |I2C_Protocal|Equal4~3          ; |I2C_Protocal|Equal4~3          ; combout          ;
+; |I2C_Protocal|Selector15~0      ; |I2C_Protocal|Selector15~0      ; combout          ;
+; |I2C_Protocal|Selector14~0      ; |I2C_Protocal|Selector14~0      ; combout          ;
+; |I2C_Protocal|Selector16~0      ; |I2C_Protocal|Selector16~0      ; combout          ;
+; |I2C_Protocal|Selector18~0      ; |I2C_Protocal|Selector18~0      ; combout          ;
+; |I2C_Protocal|Selector21~1      ; |I2C_Protocal|Selector21~1      ; combout          ;
+; |I2C_Protocal|Selector22~0      ; |I2C_Protocal|Selector22~0      ; combout          ;
+; |I2C_Protocal|y.S25             ; |I2C_Protocal|y.S25             ; q                ;
+; |I2C_Protocal|Selector19~0      ; |I2C_Protocal|Selector19~0      ; combout          ;
+; |I2C_Protocal|Selector19~1      ; |I2C_Protocal|Selector19~1      ; combout          ;
+; |I2C_Protocal|Selector20~1      ; |I2C_Protocal|Selector20~1      ; combout          ;
+; |I2C_Protocal|y.S13             ; |I2C_Protocal|y.S13             ; q                ;
+; |I2C_Protocal|y.S24             ; |I2C_Protocal|y.S24             ; q                ;
+; |I2C_Protocal|Selector24~0      ; |I2C_Protocal|Selector24~0      ; combout          ;
+; |I2C_Protocal|Selector24~1      ; |I2C_Protocal|Selector24~1      ; combout          ;
+; |I2C_Protocal|Selector24~2      ; |I2C_Protocal|Selector24~2      ; combout          ;
+; |I2C_Protocal|Selector12~0      ; |I2C_Protocal|Selector12~0      ; combout          ;
+; |I2C_Protocal|Selector23~0      ; |I2C_Protocal|Selector23~0      ; combout          ;
+; |I2C_Protocal|Selector23~1      ; |I2C_Protocal|Selector23~1      ; combout          ;
+; |I2C_Protocal|y.S28             ; |I2C_Protocal|y.S28             ; q                ;
+; |I2C_Protocal|y.S27             ; |I2C_Protocal|y.S27             ; q                ;
+; |I2C_Protocal|Selector27~2      ; |I2C_Protocal|Selector27~2      ; combout          ;
+; |I2C_Protocal|y.S26             ; |I2C_Protocal|y.S26             ; q                ;
+; |I2C_Protocal|Selector26~0      ; |I2C_Protocal|Selector26~0      ; combout          ;
+; |I2C_Protocal|Selector25~1      ; |I2C_Protocal|Selector25~1      ; combout          ;
+; |I2C_Protocal|fsm_out[3]~output ; |I2C_Protocal|fsm_out[3]~output ; o                ;
+; |I2C_Protocal|fsm_out[3]        ; |I2C_Protocal|fsm_out[3]        ; padout           ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |I2C_Protocal|y.S18             ; |I2C_Protocal|y.S18             ; q                ;
+; |I2C_Protocal|y.S16             ; |I2C_Protocal|y.S16             ; q                ;
+; |I2C_Protocal|y.S15             ; |I2C_Protocal|y.S15             ; q                ;
+; |I2C_Protocal|WideOr28~1        ; |I2C_Protocal|WideOr28~1        ; combout          ;
+; |I2C_Protocal|y.S17             ; |I2C_Protocal|y.S17             ; q                ;
+; |I2C_Protocal|y.S19             ; |I2C_Protocal|y.S19             ; q                ;
+; |I2C_Protocal|y.S22             ; |I2C_Protocal|y.S22             ; q                ;
+; |I2C_Protocal|y.S23             ; |I2C_Protocal|y.S23             ; q                ;
+; |I2C_Protocal|WideOr28~3        ; |I2C_Protocal|WideOr28~3        ; combout          ;
+; |I2C_Protocal|y.S20             ; |I2C_Protocal|y.S20             ; q                ;
+; |I2C_Protocal|y.S21             ; |I2C_Protocal|y.S21             ; q                ;
+; |I2C_Protocal|Selector17~0      ; |I2C_Protocal|Selector17~0      ; combout          ;
+; |I2C_Protocal|Equal4~2          ; |I2C_Protocal|Equal4~2          ; combout          ;
+; |I2C_Protocal|Equal4~3          ; |I2C_Protocal|Equal4~3          ; combout          ;
+; |I2C_Protocal|Selector15~0      ; |I2C_Protocal|Selector15~0      ; combout          ;
+; |I2C_Protocal|Selector14~0      ; |I2C_Protocal|Selector14~0      ; combout          ;
+; |I2C_Protocal|Selector16~0      ; |I2C_Protocal|Selector16~0      ; combout          ;
+; |I2C_Protocal|Selector18~0      ; |I2C_Protocal|Selector18~0      ; combout          ;
+; |I2C_Protocal|Selector21~1      ; |I2C_Protocal|Selector21~1      ; combout          ;
+; |I2C_Protocal|Selector22~0      ; |I2C_Protocal|Selector22~0      ; combout          ;
+; |I2C_Protocal|y.S25             ; |I2C_Protocal|y.S25             ; q                ;
+; |I2C_Protocal|Selector19~0      ; |I2C_Protocal|Selector19~0      ; combout          ;
+; |I2C_Protocal|Selector19~1      ; |I2C_Protocal|Selector19~1      ; combout          ;
+; |I2C_Protocal|Selector20~1      ; |I2C_Protocal|Selector20~1      ; combout          ;
+; |I2C_Protocal|y.S13             ; |I2C_Protocal|y.S13             ; q                ;
+; |I2C_Protocal|y.S24             ; |I2C_Protocal|y.S24             ; q                ;
+; |I2C_Protocal|Selector24~0      ; |I2C_Protocal|Selector24~0      ; combout          ;
+; |I2C_Protocal|Selector24~1      ; |I2C_Protocal|Selector24~1      ; combout          ;
+; |I2C_Protocal|Selector24~2      ; |I2C_Protocal|Selector24~2      ; combout          ;
+; |I2C_Protocal|Selector12~0      ; |I2C_Protocal|Selector12~0      ; combout          ;
+; |I2C_Protocal|Selector23~0      ; |I2C_Protocal|Selector23~0      ; combout          ;
+; |I2C_Protocal|Selector23~1      ; |I2C_Protocal|Selector23~1      ; combout          ;
+; |I2C_Protocal|y.S28             ; |I2C_Protocal|y.S28             ; q                ;
+; |I2C_Protocal|y.S0              ; |I2C_Protocal|y.S0              ; q                ;
+; |I2C_Protocal|y.S27             ; |I2C_Protocal|y.S27             ; q                ;
+; |I2C_Protocal|Selector27~2      ; |I2C_Protocal|Selector27~2      ; combout          ;
+; |I2C_Protocal|y.S0~1            ; |I2C_Protocal|y.S0~1            ; combout          ;
+; |I2C_Protocal|y.S26             ; |I2C_Protocal|y.S26             ; q                ;
+; |I2C_Protocal|Selector26~0      ; |I2C_Protocal|Selector26~0      ; combout          ;
+; |I2C_Protocal|Selector25~1      ; |I2C_Protocal|Selector25~1      ; combout          ;
+; |I2C_Protocal|fsm_out[3]~output ; |I2C_Protocal|fsm_out[3]~output ; o                ;
+; |I2C_Protocal|fsm_out[3]        ; |I2C_Protocal|fsm_out[3]        ; padout           ;
++---------------------------------+---------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Nov 19 14:33:50 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off I2C_Protocal -c I2C_Protocal
+Info: Using vector source file "C:/Users/Alexander/Documents/ALTERA/HW5/I2C/I2C_Protocal.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      61.11 %
+Info: Number of transitions in simulation is 2171
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 166 megabytes
+    Info: Processing ended: Fri Nov 19 14:33:51 2010
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
