@@ -1,9 +1,39 @@
 |I2C_Protocal
-clk_hi => ~NO_FANOUT~
-SDA_in => ~NO_FANOUT~
-SCL_in => ~NO_FANOUT~
-byte_done => ~NO_FANOUT~
-addr_bsend => ~NO_FANOUT~
-addr_out <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+fsm_in[0] => Equal0.IN0
+fsm_in[0] => Equal1.IN0
+fsm_in[0] => Equal2.IN1
+fsm_in[0] => Equal3.IN0
+fsm_in[0] => Equal4.IN0
+fsm_in[0] => Equal5.IN0
+fsm_in[0] => Equal6.IN0
+fsm_in[0] => Equal8.IN0
+fsm_in[0] => Equal9.IN2
+fsm_in[1] => Equal0.IN1
+fsm_in[1] => Equal1.IN1
+fsm_in[1] => Equal2.IN2
+fsm_in[1] => Equal3.IN1
+fsm_in[1] => Equal4.IN1
+fsm_in[1] => Equal5.IN2
+fsm_in[1] => Equal6.IN1
+fsm_in[1] => Equal7.IN0
+fsm_in[1] => Equal8.IN2
+fsm_in[1] => Equal9.IN0
+fsm_in[2] => Equal0.IN2
+fsm_in[2] => Equal1.IN3
+fsm_in[2] => Equal2.IN0
+fsm_in[2] => Equal3.IN2
+fsm_in[2] => Equal4.IN2
+fsm_in[2] => Equal5.IN1
+fsm_in[2] => Equal6.IN2
+fsm_in[2] => Equal7.IN1
+fsm_in[2] => Equal8.IN3
+fsm_in[2] => Equal9.IN1
+fsm_in[3] => Equal0.IN3
+fsm_in[3] => Equal1.IN2
+fsm_in[3] => Equal8.IN1
+fsm_out[0] <= fsm_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fsm_out[1] <= fsm_out~0.DB_MAX_OUTPUT_PORT_TYPE
+fsm_out[2] <= WideOr28.DB_MAX_OUTPUT_PORT_TYPE
+fsm_out[3] <= fsm_out~2.DB_MAX_OUTPUT_PORT_TYPE
 
 

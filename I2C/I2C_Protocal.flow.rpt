@@ -1,5 +1,5 @@
 Flow report for I2C_Protocal
-Fri Nov 19 02:30:29 2010
+Fri Nov 19 10:51:52 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
 
 
@@ -38,16 +38,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Flow Status                   ; Successful - Fri Nov 19 02:30:29 2010         ;
+; Flow Status                   ; Successful - Fri Nov 19 10:51:52 2010         ;
 ; Quartus II Version            ; 9.0 Build 235 06/17/2009 SP 2 SJ Full Version ;
 ; Revision Name                 ; I2C_Protocal                                  ;
 ; Top-level Entity Name         ; I2C_Protocal                                  ;
 ; Family                        ; Stratix II                                    ;
 ; Met timing requirements       ; Yes                                           ;
-; Logic utilization             ; 0 %                                           ;
-;     Combinational ALUTs       ; 0 / 12,480 ( 0 % )                            ;
-;     Dedicated logic registers ; 0 / 12,480 ( 0 % )                            ;
-; Total registers               ; 0                                             ;
+; Logic utilization             ; < 1 %                                         ;
+;     Combinational ALUTs       ; 47 / 12,480 ( < 1 % )                         ;
+;     Dedicated logic registers ; 32 / 12,480 ( < 1 % )                         ;
+; Total registers               ; 32                                            ;
 ; Total pins                    ; 9 / 343 ( 3 % )                               ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 0 / 419,328 ( 0 % )                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/19/2010 02:30:20 ;
+; Start date & time ; 11/19/2010 10:51:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; I2C_Protocal        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 105773419603757.129015182002780 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 105773419603757.129018190204672 ; --            ; --          ; --             ;
 ; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; --          ; Top            ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
@@ -87,11 +87,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 237 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:03     ; 1.0                     ; 275 MB              ; 00:00:03                           ;
-; Assembler               ; 00:00:02     ; 1.0                     ; 236 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 168 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:07     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 243 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 277 MB              ; 00:00:03                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 236 MB              ; 00:00:02                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 170 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,3 +1,8 @@
+-- Author: Hua Xu, Teng Yang  --
+-- hx2136@columbia.edu --
+-- ty2227@columbia.edu --
+-- Electrical Engieering of Columbia University  --
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -17,6 +22,7 @@ begin
 	begin
 		if (clk_hi'event and clk_hi = '1') then
 			case y is
+			----------------------------START SIGNAL--------
 				when S0 =>
 					if 		fsm_in="1100" then 	y<=S1;
 					else 						y<=S0;
@@ -29,6 +35,7 @@ begin
 					if fsm_in(2 downto 0)="000" then y<=S3;
 					else 						y<=S2;
 					end if;
+		    ------------------------------------------------
 				when S3 =>
 					if 		fsm_in="0100" then 	y<=S4;
 					elsif 	fsm_in="1100" then 	y<=S5;

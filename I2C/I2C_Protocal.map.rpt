@@ -1,5 +1,5 @@
 Analysis & Synthesis report for I2C_Protocal
-Fri Nov 19 02:30:21 2010
+Fri Nov 19 10:51:44 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
 
 
@@ -12,8 +12,10 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Analysis & Synthesis Messages
+  7. State Machine - |I2C_Protocal|y
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -39,15 +41,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Fri Nov 19 02:30:21 2010         ;
+; Analysis & Synthesis Status   ; Successful - Fri Nov 19 10:51:44 2010         ;
 ; Quartus II Version            ; 9.0 Build 235 06/17/2009 SP 2 SJ Full Version ;
 ; Revision Name                 ; I2C_Protocal                                  ;
 ; Top-level Entity Name         ; I2C_Protocal                                  ;
 ; Family                        ; Stratix II                                    ;
 ; Logic utilization             ; N/A                                           ;
-;     Combinational ALUTs       ; 0                                             ;
-;     Dedicated logic registers ; 0                                             ;
-; Total registers               ; 0                                             ;
+;     Combinational ALUTs       ; 44                                            ;
+;     Dedicated logic registers ; 29                                            ;
+; Total registers               ; 29                                            ;
 ; Total pins                    ; 9                                             ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 0                                             ;
@@ -142,39 +144,44 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+----------------------------------------------+-------+
-; Resource                                     ; Usage ;
-+----------------------------------------------+-------+
-; Estimated ALUTs Used                         ; 0     ;
-; Dedicated logic registers                    ; 0     ;
-;                                              ;       ;
-; Estimated ALUTs Unavailable                  ; 0     ;
-;                                              ;       ;
-; Total combinational functions                ; 0     ;
-; Combinational ALUT usage by number of inputs ;       ;
-;     -- 7 input functions                     ; 0     ;
-;     -- 6 input functions                     ; 0     ;
-;     -- 5 input functions                     ; 0     ;
-;     -- 4 input functions                     ; 0     ;
-;     -- <=3 input functions                   ; 0     ;
-;                                              ;       ;
-; Combinational ALUTs by mode                  ;       ;
-;     -- normal mode                           ; 0     ;
-;     -- extended LUT mode                     ; 0     ;
-;     -- arithmetic mode                       ; 0     ;
-;     -- shared arithmetic mode                ; 0     ;
-;                                              ;       ;
-; Estimated ALUT/register pairs used           ; 0     ;
-;                                              ;       ;
-; Total registers                              ; 0     ;
-;     -- Dedicated logic registers             ; 0     ;
-;     -- I/O registers                         ; 0     ;
-;                                              ;       ;
-;                                              ;       ;
-; I/O pins                                     ; 9     ;
-+----------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++-----------------------------------------------+--------+
+; Resource                                      ; Usage  ;
++-----------------------------------------------+--------+
+; Estimated ALUTs Used                          ; 44     ;
+; Dedicated logic registers                     ; 29     ;
+;                                               ;        ;
+; Estimated ALUTs Unavailable                   ; 3      ;
+;                                               ;        ;
+; Total combinational functions                 ; 44     ;
+; Combinational ALUT usage by number of inputs  ;        ;
+;     -- 7 input functions                      ; 0      ;
+;     -- 6 input functions                      ; 7      ;
+;     -- 5 input functions                      ; 16     ;
+;     -- 4 input functions                      ; 12     ;
+;     -- <=3 input functions                    ; 9      ;
+;                                               ;        ;
+; Combinational ALUTs by mode                   ;        ;
+;     -- normal mode                            ; 44     ;
+;     -- extended LUT mode                      ; 0      ;
+;     -- arithmetic mode                        ; 0      ;
+;     -- shared arithmetic mode                 ; 0      ;
+;                                               ;        ;
+; Estimated ALUT/register pairs used            ; 44     ;
+;                                               ;        ;
+; Total registers                               ; 29     ;
+;     -- Dedicated logic registers              ; 29     ;
+;     -- I/O registers                          ; 0      ;
+;                                               ;        ;
+; Estimated ALMs:  partially or completely used ; 22     ;
+;                                               ;        ;
+; I/O pins                                      ; 9      ;
+; Maximum fan-out node                          ; clk_hi ;
+; Maximum fan-out                               ; 29     ;
+; Total fan-out                                 ; 256    ;
+; Average fan-out                               ; 3.12   ;
++-----------------------------------------------+--------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -182,9 +189,47 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |I2C_Protocal              ; 0 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 9    ; 0            ; |I2C_Protocal       ; work         ;
+; |I2C_Protocal              ; 44 (44)           ; 29 (29)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 9    ; 0            ; |I2C_Protocal       ; work         ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |I2C_Protocal|y                                                                                                                                                                                                     ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+------+------+------+------+------+------+------+------+------+
+; Name  ; y.S28 ; y.S27 ; y.S26 ; y.S25 ; y.S24 ; y.S23 ; y.S22 ; y.S21 ; y.S20 ; y.S19 ; y.S18 ; y.S17 ; y.S16 ; y.S15 ; y.S14 ; y.S13 ; y.S12 ; y.S11 ; y.S10 ; y.S9 ; y.S8 ; y.S7 ; y.S6 ; y.S5 ; y.S4 ; y.S3 ; y.S2 ; y.S1 ; y.S0 ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+------+------+------+------+------+------+------+------+------+
+; y.S0  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ;
+; y.S1  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 1    ;
+; y.S2  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 1    ;
+; y.S3  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 1    ;
+; y.S4  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 1    ;
+; y.S5  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S6  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S7  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S8  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S9  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S10 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S11 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S12 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S13 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S14 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S15 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S16 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S17 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S18 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S19 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S20 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S21 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S22 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S23 ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S24 ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S25 ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S26 ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S27 ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.S28 ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+------+------+------+------+------+------+------+------+------+------+
 
 
 +------------------------------------------------------+
@@ -192,7 +237,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 29    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -202,40 +247,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |I2C_Protocal|y~17         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
-    Info: Processing started: Fri Nov 19 02:30:20 2010
+    Info: Processing started: Fri Nov 19 10:51:42 2010
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off I2C_Protocal -c I2C_Protocal
 Info: Found 2 design units, including 1 entities, in source file I2C_Protocal.vhd
     Info: Found design unit 1: I2C_Protocal-FSM_Moore
     Info: Found entity 1: I2C_Protocal
 Info: Elaborating entity "I2C_Protocal" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at I2C_Protocal.vhd(8): used implicit default value for signal "SDA_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at I2C_Protocal.vhd(8): used implicit default value for signal "SDA_enable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at I2C_Protocal.vhd(8): used implicit default value for signal "data_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at I2C_Protocal.vhd(8): used implicit default value for signal "addr_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SDA_out" is stuck at GND
-    Warning (13410): Pin "SDA_enable" is stuck at GND
-    Warning (13410): Pin "data_out" is stuck at GND
-    Warning (13410): Pin "addr_out" is stuck at GND
-Warning: Design contains 5 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk_hi"
-    Warning (15610): No output dependent on input pin "SDA_in"
-    Warning (15610): No output dependent on input pin "SCL_in"
-    Warning (15610): No output dependent on input pin "byte_done"
-    Warning (15610): No output dependent on input pin "addr_bsend"
-Info: Implemented 9 device resources after synthesis - the final resource count might be different
+Info: Implemented 53 device resources after synthesis - the final resource count might be different
     Info: Implemented 5 input pins
     Info: Implemented 4 output pins
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 237 megabytes
-    Info: Processing ended: Fri Nov 19 02:30:21 2010
-    Info: Elapsed time: 00:00:01
+    Info: Implemented 44 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 243 megabytes
+    Info: Processing ended: Fri Nov 19 10:51:44 2010
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
