@@ -12,13 +12,5 @@ architecture FSM_Moore of I2C_Protocal is
 	TYPE state_type is (S0, S1, S2);
 	SIGNAL y : state_type;
 begin
-	process(clk_hi)
-	begin
-		if (clk_hi'event and clk = '1') then
-			case y is
-				when S0 =>
-			end case;
-		end if;
-	end process;
 
 end FSM_Moore;

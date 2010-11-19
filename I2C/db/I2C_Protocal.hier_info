@@ -1,0 +1,9 @@
+|I2C_Protocal
+clk_hi => ~NO_FANOUT~
+SDA_in => ~NO_FANOUT~
+SCL_in => ~NO_FANOUT~
+byte_done => ~NO_FANOUT~
+addr_bsend => ~NO_FANOUT~
+addr_out <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
