@@ -1,5 +1,5 @@
 Fitter report for I2C_Protocal
-Fri Nov 19 10:51:48 2010
+Fri Nov 19 13:05:30 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
 
 
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +-------------------------------+-----------------------------------------------+
-; Fitter Status                 ; Successful - Fri Nov 19 10:51:48 2010         ;
+; Fitter Status                 ; Successful - Fri Nov 19 13:05:30 2010         ;
 ; Quartus II Version            ; 9.0 Build 235 06/17/2009 SP 2 SJ Full Version ;
 ; Revision Name                 ; I2C_Protocal                                  ;
 ; Top-level Entity Name         ; I2C_Protocal                                  ;
@@ -145,12 +145,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.40        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2 processors           ; < 0.1%      ;
+;     2 processors           ;  25.0%      ;
 +----------------------------+-------------+
 
 
@@ -1384,7 +1384,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
-    Info: Processing started: Fri Nov 19 10:51:44 2010
+    Info: Processing started: Fri Nov 19 13:05:27 2010
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off I2C_Protocal -c I2C_Protocal
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info: Automatically selected device EP2S15F484C3 for design I2C_Protocal
@@ -1428,7 +1428,7 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
         Info: I/O bank number 9 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  6 pins available
         Info: I/O bank number 10 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  6 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter preparation operations ending: elapsed time is 00:00:01
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -1461,7 +1461,7 @@ Warning: The Reserve All Unused Pins setting has not been specified, and will de
 Info: Generated suppressed messages file C:/Users/Alexander/Documents/ALTERA/HW5/I2C/I2C_Protocal.fit.smsg
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 277 megabytes
-    Info: Processing ended: Fri Nov 19 10:51:48 2010
+    Info: Processing ended: Fri Nov 19 13:05:31 2010
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

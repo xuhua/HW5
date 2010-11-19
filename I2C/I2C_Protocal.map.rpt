@@ -1,5 +1,5 @@
 Analysis & Synthesis report for I2C_Protocal
-Fri Nov 19 10:51:44 2010
+Fri Nov 19 13:05:26 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Fri Nov 19 10:51:44 2010         ;
+; Analysis & Synthesis Status   ; Successful - Fri Nov 19 13:05:26 2010         ;
 ; Quartus II Version            ; 9.0 Build 235 06/17/2009 SP 2 SJ Full Version ;
 ; Revision Name                 ; I2C_Protocal                                  ;
 ; Top-level Entity Name         ; I2C_Protocal                                  ;
@@ -262,7 +262,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
-    Info: Processing started: Fri Nov 19 10:51:42 2010
+    Info: Processing started: Fri Nov 19 13:05:25 2010
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off I2C_Protocal -c I2C_Protocal
 Info: Found 2 design units, including 1 entities, in source file I2C_Protocal.vhd
     Info: Found design unit 1: I2C_Protocal-FSM_Moore
@@ -274,8 +274,8 @@ Info: Implemented 53 device resources after synthesis - the final resource count
     Info: Implemented 44 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 243 megabytes
-    Info: Processing ended: Fri Nov 19 10:51:44 2010
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Fri Nov 19 13:05:26 2010
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for I2C_Protocal
-Fri Nov 19 10:51:52 2010
+Fri Nov 19 13:05:34 2010
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
 
 
@@ -471,7 +471,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
-    Info: Processing started: Fri Nov 19 10:51:51 2010
+    Info: Processing started: Fri Nov 19 13:05:34 2010
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off I2C_Protocal -c I2C_Protocal --timing_analysis_only
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
 Warning: Found pins functioning as undefined clocks and/or memory enables
@@ -546,8 +546,8 @@ Info: th for register "y.S22" (data pin = "fsm_in[1]", clock pin = "clk_hi") is 
         Info: Total interconnect delay = 4.661 ns ( 81.40 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 183 megabytes
-    Info: Processing ended: Fri Nov 19 10:51:52 2010
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Nov 19 13:05:34 2010
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

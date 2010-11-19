@@ -22,7 +22,7 @@ begin
 	begin
 		if (clk_hi'event and clk_hi = '1') then
 			case y is
-			----------------------------START SIGNAL------
+			----------------------------START SIGNAL--------
 				when S0 =>
 					if 		fsm_in="1100" then 	y<=S1;
 					else 						y<=S0;
@@ -35,7 +35,7 @@ begin
 					if fsm_in(2 downto 0)="000" then y<=S3;
 					else 						y<=S2;
 					end if;
-		    ----------------------------------------------
+		    ----------------------------Address Send -------
 				when S3 =>
 					if 		fsm_in="0100" then 	y<=S4;
 					elsif 	fsm_in="1100" then 	y<=S5;
@@ -63,6 +63,7 @@ begin
 					elsif 	fsm_in="1100" then 	y<=S5;
 					else 						y<=S7;
 					end if;
+			-------------------------Initial--ACK--when Master Write---
 				when S8 =>
 					if fsm_in(2 downto 0)="111" then y<=S9;
 					else y<=S8;
@@ -71,6 +72,8 @@ begin
 					if fsm_in(2 downto 0)="000" then y<=S10;
 					else y<=S9;
 					end if;
+			----------------------------Data send to slave----------------
+			
 				when S10 =>
 					if fsm_in="0100" 	  then 	y<=S11;
 					elsif fsm_in = "1100" then 	y<=S12;
@@ -97,6 +100,7 @@ begin
 					elsif fsm_in="1100" then y<=S12;
 					else y<=S14;
 					end if;
+			----------------------------Slave ACK--and Stop signal trap-----
 				when S15 =>
 					if fsm_in(2 downto 0)="110" then y<=S17;
 					else y<=S15;
@@ -109,6 +113,7 @@ begin
 					if fsm_in(2 downto 0)="000" then y<=S10;
 					else y<=S17;
 					end if;
+			--------------------------Initial ACK when master read ---------
 				when S18 =>
 					if fsm_in(2 downto 0)="111" then y<=S19;
 					else y<=S18;
@@ -118,6 +123,7 @@ begin
 					elsif fsm_in(2 downto 0)="001" then y<=S21;
 					else y<=S19;
 					end if;
+			---------------------------Send data to master -----------------
 				when S20 =>
 					if fsm_in(2 downto 1)="10" then y<=S22;
 					else y<=S20;
@@ -138,6 +144,7 @@ begin
 					elsif fsm_in(2 downto 0)="010" then y<=S24;
 					else y<=S23;
 					end if;
+				----------------------Master ACK or stop signal trap-------
 				when S24 =>
 					if fsm_in="0110" then y<=S25;
 					else y<=S24;
